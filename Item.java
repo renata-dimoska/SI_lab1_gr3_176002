@@ -39,3 +39,41 @@ class Item {
            return price*A*15%;
 	}
 }
+
+class Receipt{
+String name;
+Item *list;
+int num;
+Recepti(){
+list = new Item[0];
+}
+Picerija(String name, Item *l, int numI){
+this.name = name;
+list = new Item[num];
+for(int i=0;i<num;i++)
+            list[i]=l[i];
+        num=numI;
+    }
+
+ void dodadi(Item l) 
+    {
+        for(int i=0;i<num;i++)
+                if(strcmp(l.getName(),list[i].getName())==0)
+                return;
+        Item *tmp;
+        tmp=new Item[num];
+        for(int i=0;i<num;i++)
+            tmp[i]=list[i];
+        delete[] list;
+        list=new Item[num+1];
+        for(int i=0;i<num;i++)
+            list[i]=tmp[i];
+        list[num]=l;
+        num++;
+        delete [] tmp;
+    }
+    
+   int vkupno(){
+   return cena.Item;
+   }
+}
